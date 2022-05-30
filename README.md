@@ -60,29 +60,23 @@ This repo contains the source code and other details for a neural machine transl
 
 ## How to use
 
-### Step 1. Preprocess the data
 ```
 python preprocess.py
 ```
-The source text file(`src`) and target text file(`tgt`) are tokenized through `Mecab`+`SentencePiece`.
 
-### Step 2. Train the model
 ```
-!python train.py
+python train.py
 ```
-If you want to continue training the model, add `--train_from (model path)/model.pt` later.
 
-### Step 3. Translate
+
 ```
 python translate.py -model data/model/model.pt -src data/src-test.txt -tgt data/tgt-test.txt -replace_unk -verbose -gpu 0
 ```
 
-### Step 4. Scoring the model
 ```
 perl tools/multi-bleu.perl data/tgt-test.txt < data/pred.txt
 ```
 
-### Step 5. Excute GUI
 ```
 pyhton gui.py
 ```
@@ -91,4 +85,4 @@ pyhton gui.py
 ---
 
 ## Reference
-https://github.com/OpenNMT/OpenNMT-py
+opensource for OPEN_NMT
